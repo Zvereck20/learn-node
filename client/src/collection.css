@@ -1,0 +1,193 @@
+.container {
+  margin: 0 auto;
+  padding: 50px 20px;
+  width: 100%;
+  max-width: 1140px;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  position: relative;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  border: 2px solid green;
+  border-radius: 50%;
+  border-left-color: transparent;
+  animation: loader 1s infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.notification {
+  width: 100%;
+  max-width: 1140px;
+  padding: 20px;
+  background-color: lightgreen;
+  color: #000;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.notification--error {
+  background-color: red;
+  color: #fff;
+}
+
+.notification-title {
+  margin: 0;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  width: 100%;
+  height: 50px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  &:disabled:hover {
+    background-color: #fff;
+    color: rgba(16, 16, 16, 0.3);
+    cursor: default;
+  }
+}
+
+.button--icon {
+  width: auto;
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    background-color: transparent;
+    transform: scale(1.2);
+  }
+}
+
+.button img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.wrap {
+  width: 90%;
+}
+
+.form {
+  padding: 25px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form--small {
+  width: 50%;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.form-item p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.form-item input,
+.form-item textarea {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 15px;
+  border-width: 1px;
+}
+
+.form-item textarea {
+  min-height: 150px;
+}
+
+.form .button {
+  margin-top: 50px;
+}
+
+.orders-table {
+  margin-top: 30px;
+  width: 90%;
+  border: 2px solid grey;
+  border-collapse: collapse;
+}
+
+.orders-table th {
+  text-align: center;
+  background: #ccc;
+  padding: 15px;
+  border: 2px solid grey;
+  position: relative;
+}
+
+.orders-table td {
+  padding: 5px;
+  border: 2px solid grey;
+}
+
+.orders-table .button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.pagination {
+  padding-top: 25px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.pagination-current {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.search input {
+  padding: 10px 15px;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 15px;
+  border-width: 1px;
+}
